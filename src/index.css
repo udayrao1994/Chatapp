@@ -1,0 +1,143 @@
+.container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* Darker chat container */
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+/* Clear floats */
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Style images */
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+/* Style the right image */
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+/* Style time text */
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+/* Style time text */
+.time-left {
+  float: left;
+  color: #999;
+}
+
+p {
+  margin: 0 0 1.5em;
+}
+.le {
+    width: 324px;
+    margin: 2px;
+}
+
+.inputbox2{
+
+    width: 95%;
+    margin: 2px;
+}
+
+.header{
+  position: sticky;
+  text-align: center;
+  width: 102%;
+  padding-top: 1px;
+  background-color: lightgreen;
+}
+
+
+
+
+#landingpage{
+width:100%;
+height: 100%;
+overflow-y: scroll;
+overflow-x: hidden;
+
+}
+#h4{
+margin-left: 120px;
+}
+
+.input{
+  
+  height: 30px;
+  margin-right: 12px;
+  bottom: 16%;
+  
+
+  position: fixed;
+
+}
+
+#landingpageInput{
+  height: 25px;
+    position: fixed;
+    margin: 23px;
+    margin-left: 97px;
+}
+
+#myInput{
+  padding-right: 120px;
+  
+  
+}
+
+
+.panel-footer {
+  padding: 18 45px 19px 4px;
+  margin-top: 20px;
+  background-color: transparent;
+  border-top: 1px solid transparent;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  
+}
+
+
+
+#btn{
+  margin-left: 160px;
+  background-color: green;
+  margin-top: 75px;
+  padding-top:4px;
+  padding-left: 5p;
+  padding-bottom: 7px;
+
+}
+
+#sendmessageButton{
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 2px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+}

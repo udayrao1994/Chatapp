@@ -1,8 +1,8 @@
 import React,{FC,ChangeEvent ,useState}from 'react';
 import './App.css';
-
 import MessageBox from "./components/MessageBox"
 import {TaskI} from "./Interface";
+import { unmountComponentAtNode } from 'react-dom';
 
 
 
@@ -13,14 +13,16 @@ let Chat :FC =()=>{
   let [task,setMessage]=useState<any>("");
   let [dateTime,setdateTime]=useState<any>("");
 
+  let date:Date=new Date();
+
+
+
+dateTime=date;
   let [id,setId]=useState<any>("");
-  let [messageList,setMessageList]=useState<TaskI[
-
-  ]>([
-
-  ]);
+  let [messageList,setMessageList]=useState<TaskI[]>([]);
 
 let handleChange=(event:ChangeEvent<HTMLInputElement>):void=>{
+
 if(event.target.name==="task")
   setMessage(event.target.value)
   if(event.target.name==="id")
@@ -35,6 +37,7 @@ if(event.target.name==="task")
 let addTask=():void=>{
   
   let newTask={message:task,id:id,dateTime:dateTime}
+  console.log(dateTime.getDate())
   console.log(newTask)
 setMessageList([...messageList,newTask])
 
@@ -46,7 +49,7 @@ setMessageList([...messageList,newTask])
 
 
 <div>
- 
+
 <div id="myDIV" className="header">
   <h4>Madgical Chat Room</h4>
  
@@ -58,7 +61,7 @@ setMessageList([...messageList,newTask])
 <div className="messageList">
 
   {messageList.map((task:TaskI)=>{
-    return <MessageBox task={task} />;
+    return <MessageBox task={task } dateTime={dateTime} />;
   })}
       
 </div>

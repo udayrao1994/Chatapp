@@ -6,10 +6,20 @@ import {TaskV} from "../Interface"
 
 interface Props{
     task:TaskI;
+    dateTime:TaskI;
 }
 ;
-const MessageBox=({task}:Props)=>{
+const MessageBox=({task,dateTime}:Props)=>{
 
+
+ 
+let date=new Date();
+let month=new Date();
+let Years=new Date();
+
+let hours=new Date();
+let minute=new Date();
+let secands=new Date();
     return <div className="position ">
     
     <ul id="myUL">
@@ -19,7 +29,9 @@ const MessageBox=({task}:Props)=>{
 
   <span className="">{task.message}</span>
   <br/>
-  <span className="time-left"></span>
+<span className="datetime">{date.getDate()}/{month.getMonth()}/{Years.getFullYear()}</span>
+
+  { <span>{hours.getHours()}:{minute.getMinutes()}:{secands.getSeconds()}</span> }
 </div>
        </ul>
         </div>

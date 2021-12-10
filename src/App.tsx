@@ -3,8 +3,6 @@ import './App.css';
 import Land from './Landpage'
 
 
-
-
 let App :FC =(any,Props)=>{
 
 

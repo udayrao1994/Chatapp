@@ -1,3 +1,10 @@
+@media (max-width: 600px) {
+  .App{
+   width: 100%;
+   height: calc(100% - 50px);
+    }
+  }
+
 
 
 .App{

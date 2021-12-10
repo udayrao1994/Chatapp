@@ -14,7 +14,7 @@ interface Props{
 let Land :FC =()=>{
 
   let [userName,setUserName]=useState<any>("");
-  let [messageList2,setuSERLIST]=useState<TaskV[]>([
+  let [messageList2,setuSERLIST]=useState<TaskV[]>([{userName:""}
 
   ]);
 
@@ -30,6 +30,7 @@ let adduser=():void=>{
   
   let newTask2={userName:value}
   setUserName(value)
+  console.log(newTask2,value)
   console.log(userName)
   setuSERLIST([...messageList2,newTask2])
 }

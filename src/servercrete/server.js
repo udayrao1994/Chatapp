@@ -14,27 +14,46 @@ app.use(function (req, res, next) {
 const port = 2410;
 app.listen(port, () => console.log(`Node app listening on port ${port}`));
 
+// let { messagesData } = require("./messagesData.ts");
 
 
-app.get("/chat", function(req, res) {
-    let connection = getConnection();
-    let sql = "SELECT * FROM messages";
-    connection.query(sql, function(err, result){
+
+const mysql = require('mysql');
+const con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "UdaySingh@12345",
+  database:"chat",
+
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+});
+
+
+app.get("/messages", function(req, res) {
+    
+    let sql = "SELECT * FROM chat";
+    con.query(sql, function(err, result){
         if(err){
             console.log(err);
             res.status(404).send(err);
         }
         else {
-            res.send(result);
+             res.send(result);
+           
         }
     })
 })
 
-app.post("/chat", function(req,res){
+app.post("/messages", function(req,res){
     let body = req.body;
-    let connection = getConnection();
-    let sql = "INSERT INTO messages(message,userName,datetime) VALUES(?,?,?,?)";
-    connection.query(sql,[body.message,body.userName,body.datetime],function(err,result){
+
+    
+    let sql = "INSERT INTO chat(text,sender,time,date) VALUES(?,?,?,?)";
+    con.query(sql,[body.text,body.sender,body.time,body.date],function(err,result){
         if(err){
             console.log(err);
             res.status(404).send(err);
@@ -44,4 +63,6 @@ app.post("/chat", function(req,res){
         }
     });
 });
+
+
 

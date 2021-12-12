@@ -1,7 +1,7 @@
 .container {
   border: 2px solid #dedede;
   background-color: #f1f1f1;
-  border-radius: 5px;
+
   padding: 10px;
   margin: 10px 0;
 }
@@ -12,7 +12,7 @@
   background-color: #ddd;
 }
 
-.datetime{
+.datetime {
   padding-right: 10px;
 }
 /* Clear floats */
@@ -35,7 +35,7 @@
 .container img.right {
   float: right;
   margin-left: 20px;
-  margin-right:0;
+  margin-right: 0;
 }
 
 /* Style time text */
@@ -54,17 +54,16 @@ p {
   margin: 0 0 1.5em;
 }
 .le {
-    width: 324px;
-    margin: 2px;
+  width: 324px;
+  margin: 2px;
 }
 
-.inputbox2{
-
-    width: 95%;
-    margin: 2px;
+.inputbox2 {
+  width: 95%;
+  margin: 2px;
 }
 
-.header{
+.header {
   position: sticky;
   text-align: center;
   width: 102%;
@@ -72,44 +71,35 @@ p {
   background-color: lightgreen;
 }
 
+ 
 
-
-
-#landingpage{
-width:100%;
-height: 100%;
-overflow-y: scroll;
-overflow-x: hidden;
-
+.landingpage {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
-#h4{
-margin-left: 120px;
+#h4 {
+  margin-left: 120px;
 }
 
-.input{
-  
+.input {
   height: 30px;
   margin-right: 12px;
-  bottom: 7%;
-  
+  bottom: 16%;
 
   position: fixed;
-
 }
-
-#landingpageInput{
+#landingpageInput {
   height: 25px;
-    position: fixed;
-    margin: 23px;
-    margin-left: 97px;
+  position: fixed;
+  margin: 23px;
+  margin-left: 97px;
 }
 
-#myInput{
+#myInput {
   padding-right: 120px;
-  
-  
 }
-
 
 .panel-footer {
   padding: 18 45px 19px 4px;
@@ -118,22 +108,20 @@ margin-left: 120px;
   border-top: 1px solid transparent;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
-  
 }
 
 
 
-#btn{
-  margin-left: 160px;
+#btn {
+  margin-left: 167px;
   background-color: green;
   margin-top: 75px;
-  padding-top:4px;
+  padding-top: 4px;
   padding-left: 5p;
   padding-bottom: 7px;
-
 }
 
-#sendmessageButton{
+#sendmessageButton {
   background-color: black;
   border: none;
   color: white;
@@ -142,38 +130,137 @@ margin-left: 120px;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-
 }
 
-@media (max-width: 320px) {
-  .input{
-   width: 100%;
-   height:80px;
+
+
+@media only screen and (max-width: 600px){
+.input {
+    position: fixed;
+    top: 529px;
+    right: 21px;
+}
+}
+
+@media only screen and (max-width: 600px){
+  #myInput {
+    padding-right: 11px;
+    width: 133px;
+  }
+  }
+  @media only screen and (max-width: 540px){
+    #myInput {
+      padding-right: 62px;
+      width: 202px;
+      
     }
-  } 
-
-
- @media (max-width: 600px) {
-  .input{
-   width: 100%;
-   height:80px;
     }
-  } 
-
-  @media (max-width: 768px) {
-    .input{
-     width: 100%;
-     height:80px;
-      }
-    } 
   
+    
 
-  @media (max-width: 992px) {
-    .input{
-     width: 100%;
-     height:88px;
-      }
-    } 
+       
+  
+@media only screen and(max-width: 320px) {
+  .chatsendblogstyleinput {
+    width: 100%;
+    height: 80px;
+  }
+}
+
+@media only screen and(max-width: 600px) {
+  .input {
+    position: fixed;
+    top: 530px;
+    right: 50px;
+  }
+}
+
+
+
+
+@media only screen and(max-width: 320px) {
+  #myInput {
+    margin-top: 168%;
+    position: sticky;
+  }
+}
+
+
+
+@media only screen and(max-width: 320px) {
+  .input {
+    position: fixed;
+    top: 530px;
+    right: 50px;
+  }
+}
+
+
+
+
+@media only screen and(max-width: 992px) {
+  .input {
+    height: 30px;
+    margin-right: 12px;
+    bottom: 16%;
+
+    position: fixed;
+  }
+}
+
+@media only screen and(max-width: 320px) {
+  .input {
+    height: 30px;
+    margin-right: 12px;
+    bottom: 16%;
+
+    position: fixed;
+  }
+}
+
+@media (max-width: 600px)  {
+  .headingtext {
+  margin-left: -7%;
+  }
+}
+
+
+
+
+
+
+p {
+  font-size: 10px;
+}
+.user {
+  align-items: right;
+  text-align: right;
+  margin-right: 20px;
+  padding-top: 15px;
+}
+.client {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+.userMessage {
+  padding: 10px;
+  color: white;
+  background-color: blue;
+  text-align: center;
+  font-size: 15px;
+  border-radius: 10px;
+}
+.clientMessage {
+  background-color: wheat;
+  padding: 10px;
+  text-align: left;
+  font-size: 15px;
+  border-radius: 10px;
+}
+.chatHistoryStyle {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
 
 
 

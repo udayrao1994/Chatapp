@@ -1,20 +1,12 @@
-export interface TaskI{
-    message:any;
-    id:any;   
-    dateTime:any;
+export interface PostI {
+  text: string;
+  sender: string;
+  time: string;
+  date: string;
 }
-export interface TaskV{
-    userName:any;   
-  
+export interface TaskV {
+  userName: string;
 }
-export interface TaskP{
- 
-    takingInput:any;   
-  
+export interface TaskP {
+  takingInput: string;
 }
-
-
-
-
-
-

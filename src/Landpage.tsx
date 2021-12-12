@@ -39,14 +39,15 @@ let adduser=():void=>{
 
 
 
-return <div id="landingpage">
+return <div className="landingpage">
 
  
 {
   userName === "" ? 
   <React.Fragment>
+    <div className="headingtext">
   <h4 id="h4">Welcome Chat App</h4>
-<input  id="landingpageInput"  type="text" placeholder="Type Meaasage here..." name="userName"
+<input  id="landingpageInput"  type="text" placeholder="Type Name here..." name="userName"
     onChange={handleChange}
           />
   <button 
@@ -55,11 +56,12 @@ return <div id="landingpage">
   >
     Enter
   </button>
+  </div>
   </React.Fragment>
   :
   ""}
   {
-    userName!="" ? <Chat /> : ""
+    userName!="" ? <Chat userName={userName}/> : ""
   }
 
 </div>

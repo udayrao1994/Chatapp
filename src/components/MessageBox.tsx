@@ -1,41 +1,43 @@
 import React from "react";
-import {TaskI} from "../Interface"
-import {TaskV} from "../Interface"
+import { PostI } from "../Interface";
+import { TaskV } from "../Interface";
+import axios from "axios";
 
-
-
-interface Props{
-    task:TaskI;
-    dateTime:TaskI;
+interface Props {
+  dateTime: PostI;
+  ele: PostI;
+  userName:string;
 }
-;
-const MessageBox=({task,dateTime}:Props)=>{
 
+const MessageBox = ({ userName,ele }: Props) => {
+  let date = new Date();
+  let month = new Date();
+  let Years = new Date();
 
- 
-let date=new Date();
-let month=new Date();
-let Years=new Date();
+  let hours = new Date();
+  let minute = new Date();
+  let secands = new Date();
 
-let hours=new Date();
-let minute=new Date();
-let secands=new Date();
-    return <div className="position ">
-    
-    <ul id="myUL">
-     
-
-<div className="container darker">
-
-  <span className="">{task.message}</span>
-  <br/>
-<span className="datetime">{date.getDate()}/{month.getMonth()}/{Years.getFullYear()}</span>
-
-  { <span>{hours.getHours()}:{minute.getMinutes()}:{secands.getSeconds()}</span> }
+  return (
+    <div className="position" >
+{userName === ele.sender ?
+    <div className="user">
+      <p>You : {date.getDate()}/{month.getMonth()}/{Years.getFullYear()}- {hours.getHours()}:{minute.getMinutes()}</p>
+      <span className="userMessage bg-primary mt-3">
+        {ele.text }
+      </span>
+    </div>
+    :
+    <div className="client">
+      <p>{ele.sender} :{date.getDate()}/{month.getMonth()}/{Years.getFullYear()}- {hours.getHours()}:{minute.getMinutes()}</p>
+      <span className="clientMessage mt-3">
+        { ele.text }
+      </span>
+    </div>
+}
 </div>
-       </ul>
-        </div>
-        
-}
 
-export default MessageBox
+  );
+};
+
+export default MessageBox;

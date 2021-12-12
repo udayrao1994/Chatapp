@@ -1,7 +1,7 @@
 .container {
   border: 2px solid #dedede;
   background-color: #f1f1f1;
-
+  border-radius: 5px;
   padding: 10px;
   margin: 10px 0;
 }
@@ -84,9 +84,9 @@ p {
 }
 
 .input {
-  height: 30px;
+  height: 25px;
   margin-right: 12px;
-  bottom: 16%;
+  bottom: 13%;
 
   position: fixed;
 }
@@ -113,7 +113,7 @@ p {
 
 
 #btn {
-  margin-left: 167px;
+  margin-left: 160px;
   background-color: green;
   margin-top: 75px;
   padding-top: 4px;

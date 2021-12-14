@@ -1,6 +1,5 @@
 import React,{FC,ChangeEvent ,useState}from 'react';
 import Chat from './ChatBox'
-import './App.css';
 
 import {TaskV} from "./Interface";
 import {TaskP} from "./Interface";

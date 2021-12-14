@@ -1,10 +1,9 @@
 import React, { FC, ChangeEvent, useState, useEffect } from "react";
 import { PostI } from "./Interface";
-import "./App.css";
+import "./index.css";
 import MessageBox from "./components/MessageBox";
 import axios, { AxiosResponse } from "axios";
-import { url } from "inspector";
-import { TaskV } from "./Interface";
+
 
 interface Props {
   userName: string;
@@ -68,9 +67,12 @@ let Chat: React.FC<Props> = ({ userName }) => {
   }, []);
 
   return (
+
+
+
     <div>
-    <div className="chatBox">
-      <div>
+    <div className="row">
+      <div className="col-8">
         <div id="myDIV" className="header">
           <h4>Madgical Chat Room</h4>
         </div>
@@ -84,6 +86,7 @@ let Chat: React.FC<Props> = ({ userName }) => {
 </div>
       <div id="inputboxfixed" className="row row-padding ">
         <div className="col-lg-4 col-lg-offset-4 inputbox2">
+         
           <div className="input" id="chatsendblogstyle">
             
             <input
@@ -104,7 +107,9 @@ let Chat: React.FC<Props> = ({ userName }) => {
             </button>
 
         
-          </div>
+            </div>
+            
+
         </div>
     </div>
     

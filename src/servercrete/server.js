@@ -20,10 +20,10 @@ app.listen(port, () => console.log(`Node app listening on port ${port}`));
 
 const mysql = require('mysql');
 const con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "UdaySingh@12345",
-  database:"chat",
+  host: "13.126.119.182",
+  user: "mohd",
+  password: "Mohd@123",
+  database:"chatbot",
 
 });
 
@@ -34,35 +34,58 @@ con.connect(function(err) {
 
 
 app.get("/messages", function(req, res) {
-    
-    let sql = "SELECT * FROM chat";
-    con.query(sql, function(err, result){
-        if(err){
-            console.log(err);
-            res.status(404).send(err);
-        }
-        else {
-             res.send(result);
-           
-        }
-    })
+   
+    let sql = "SELECT * FROM message";
+    con.query(sql, function(err, result){
+        if(err){
+            console.log(err);
+            res.status(404).send(err);
+        }
+        else {
+            res.send(result);
+        }
+    })
+})
+app.get("/Technical", function(req, res) {
+  
+    let sql = "SELECT * FROM message WHERE room = 'Technical'";
+    con.query(sql, function(err, result){
+        if(err){
+            console.log(err);
+            res.status(404).send(err);
+        }
+        else {
+            res.send(result);
+        }
+    })
+})
+app.get("/English", function(req, res) {
+    
+    let sql = "SELECT * FROM message WHERE room = 'English'";
+    con.query(sql, function(err, result){
+        if(err){
+            console.log(err);
+            res.status(404).send(err);
+        }
+        else {
+            res.send(result);
+        }
+    })
 })
 
 app.post("/messages", function(req,res){
-    let body = req.body;
+    let body = req.body;
 
-    
-    let sql = "INSERT INTO chat(text,sender,time,date) VALUES(?,?,?,?)";
-    con.query(sql,[body.text,body.sender,body.time,body.date],function(err,result){
-        if(err){
-            console.log(err);
-            res.status(404).send(err);
-        }
-        else{
-            res.send(body);
-        }
-    });
+    let sql = "INSERT INTO message(text,sender,room,time,date) VALUES(?,?,?,?,?)";
+    con.query(sql,[body.text,body.sender,body.room,body.time,body.date],function(err,result){
+        if(err){
+            console.log(err);
+            res.status(404).send(err);
+        }
+        else{
+            res.send(body);
+        }
+    });
 });
-
 
 

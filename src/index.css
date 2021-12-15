@@ -1,9 +1,14 @@
+
+
+
+
 .container {
   border: 2px solid #dedede;
   background-color: #f1f1f1;
   border-radius: 5px;
   padding: 10px;
   margin: 10px 0;
+
 }
 
 /* Darker chat container */
@@ -59,45 +64,63 @@ p {
 }
 
 .inputbox2 {
-  width: 95%;
-  margin: 2px;
+  width: 80%;
+  margin: 1px;
 }
 
-.header {
-  position: sticky;
+.headerleftpannel{
+  width: 10%;
   text-align: center;
-  width: 102%;
+  background-color: rgb(230, 233, 240);
+}
+.text-right-pannel{
+  
+font-weight: 800;
+position:fixed;
+}
+.text-left-pannel{
+margin-left: -7%;
+font-weight: 800;
+}
+.header {
+  
+ 
+  text-align: center;
+  width: 100%;
+  margin-left: -14px;
   padding-top: 1px;
   background-color: lightgreen;
 }
 
-#landingpage {
-  width: 100%;
-  height: 100%;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
 #h4 {
   margin-left: 120px;
 }
 
 .input {
-  height: 30px;
-  margin-right: 12px;
-  bottom: 16%;
+  
+  
+  width:80%;
+  
 
-  position: fixed;
+
 }
 
 #landingpageInput {
-  height: 25px;
-  position: fixed;
+  
+
   margin: 23px;
   margin-left: 97px;
 }
 
+ul{
+  width: 25%;
+  font-weight: 700;
+}
+
 #myInput {
-  padding-right: 120px;
+  width: 76%;
+
+  margin-left: -1px;
 }
 
 .panel-footer {
@@ -109,6 +132,7 @@ p {
   border-bottom-left-radius: 3px;
 }
 
+
 #btn {
   margin-left: 160px;
   background-color: green;
@@ -118,70 +142,9 @@ p {
   padding-bottom: 7px;
 }
 
-#sendmessageButton {
-  background-color: black;
-  border: none;
-  color: white;
-  padding: 2px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
 
-@media (max-width: 320px) {
-  .input {
-    width: 100%;
-    height: 80px;
-  }
-}
-
-@media (max-width: 600px) {
-  .input {
-    width: 100%;
-    height: 80px;
-  }
-}
-
-@media (max-width: 768px) {
-  .input {
-    width: 100%;
-    position: sticky;
-    margin-top: 1px;
-  }
-}
-
-@media (max-width: 768px) {
-  #myInput {
-    margin-top: 132%;
-    margin-right: -1px;
-    position: sticky;
-  }
-}
-@media (max-width: 320px) {
-  #myInput {
-    margin-top: 40%;
-  }
-}
-
-@media (max-width: 992px) {
-  .input {
-    height: 30px;
-    margin-right: 12px;
-    bottom: 16%;
-
-    position: fixed;
-  }
-}
-
-@media (max-width: 320px) {
-  .input {
-    height: 30px;
-    margin-right: 12px;
-    bottom: 16%;
-
-    position: fixed;
-  }
+#sendingmessagebutton{
+margin-left:3px;
 }
 
 p {
@@ -198,6 +161,7 @@ p {
 }
 .userMessage {
   padding: 10px;
+  
   color: white;
   text-align: center;
   font-size: 15px;
@@ -215,3 +179,187 @@ p {
   margin-top: 20px;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  
+  
+
+}
+.listSection{
+  position: fixed;
+
+}
+
+.messageList{
+  margin-bottom: 5%;
+  height: 580px;
+  overflow-x: none;
+  overflow-y: scroll;
+
+}
+li{
+  width: 100%;
+}
+.header2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+#myUL2{
+  margin-right: 65%;
+}
+ul li {
+  cursor: pointer;
+  padding-right:1px ;
+  position: relative;
+
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+.search-container button {
+  
+  margin-top: 2px;
+  
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+#inputboxsizeIncrease{
+  width:80%;
+}
+.search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+   .search-container {
+    float: none;
+  }
+}
+
+#searchbar{
+margin-bottom: 5%;
+margin-right: 50%;
+}
+/* Darker background-color on hover */
+ul li:hover {
+  background: rgb(224, 70, 70);
+}
+
+@media screen and (max-width: 1200px) {
+    #conatiner2{
+      width: 100%;
+      height: 100%;
+    }
+}
+
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .example {background: red;}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .input {
+  
+    width: 80%;
+    bottom: 1%;
+    padding-right: 2px;
+    overflow-x: hidden;
+    position: fixed;
+}
+} 
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px){
+.input {
+  
+    width: 80%;
+  
+  
+}
+}
+
+@media only screen and (max-width: 992px){
+ 
+    
+    .sendingmessagebutton{
+    
+    margin-top: 1%;
+  }
+  }
+
+
+@media (max-width: 600px){
+  .input {
+  
+        width: 80%;
+      padding-right:1%;
+      margin-top: -10%;
+      position: fixed;
+      overflow-x: hidden;
+      
+  }
+  }
+
+  @media (max-width: 600px){
+   
+    
+      #sendingmessagebutton{
+        margin-left: 168px;
+    margin-top: -49px;
+    }
+    }
+
+    @media (max-width: 992px){
+      .input {
+      
+            width: 80%;
+          padding-right:1%;
+          margin-top: -10%;
+          position: fixed;
+          overflow-x: hidden;
+          
+      }
+      }
+    
+      @media (max-width: 992px){
+       
+
+          #sendingmessagebutton{
+            margin-left: 190px;
+        margin-top: -49px;
+        }
+        }
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .example {background: pink;}
+}

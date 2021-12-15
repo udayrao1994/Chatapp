@@ -19,7 +19,7 @@ const MessageBox = ({ userName,ele }: Props) => {
   let secands = new Date();
 
   return (
-    <div className="position" >
+    <div className="chatHistoryStyle" >
 {userName === ele.sender ?
     <div className="user">
       <p>You : {date.getDate()}/{month.getMonth()}/{Years.getFullYear()}- {hours.getHours()}:{minute.getMinutes()}</p>

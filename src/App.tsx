@@ -1,6 +1,6 @@
 import React,{FC,ChangeEvent ,useState}from 'react';
 import Chat from './ChatBox'
-
+import './App.css';
 import {TaskV} from "./Interface";
 import {TaskP} from "./Interface";
 
@@ -38,23 +38,31 @@ let adduser=():void=>{
 
 
 
-return <div className="landingpage">
+return <div className="">
 
  
 {
   userName === "" ? 
   <React.Fragment>
-    <div className="headingtext">
-  <h4 id="h4">Welcome Chat App</h4>
-<input  id="landingpageInput"  type="text" placeholder="Type Name here..." name="userName"
+    <div className="landingpage">
+    <div className="row">
+      <div className="col-12 chatheader">
+  <h3>Welcome Chat Application</h3>
+  </div>
+  <div className="col-12">
+<input  id="landingpageInputbox"  type="text" placeholder="Type Name here..." name="userName"
     onChange={handleChange}
           />
+          </div>
+          <div className="col-12">
   <button 
     className="btn btn-danger" 
-    id="btn" onClick={adduser}type="submit"
+     onClick={adduser}type="submit"
   >
     Enter
   </button>
+  </div>
+  </div>
   </div>
   </React.Fragment>
   :
